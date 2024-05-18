@@ -42,6 +42,8 @@ project-name/
 │   ├── @types/
 │   │   ├── custom-types.d.ts
 │   │   └── ServiceResponse.ts
+│   ├───prisma/
+│   │   └── schema.prisma
 │   ├── api/
 │   │   ├── controllers/
 │   │   │   └── user/
@@ -63,6 +65,7 @@ project-name/
 │   ├── config/
 │   │   └── bullmq.ts
 │   ├── app.ts
+├── .env.example
 ├── .gitignore
 ├── package.json
 ├── README.md
@@ -72,6 +75,7 @@ project-name/
 ### Description of Key Files and Directories
 
 - **src/@types/**: Custom TypeScript type definitions.
+- **src/prisma/**: Prisma schema and migrations folder
 - **src/api/controllers/**: Contains controllers for handling HTTP requests.
 - **src/api/models/**: Defines data models for the application.
 - **src/api/routes/**: Defines route handlers.
@@ -79,6 +83,7 @@ project-name/
 - **src/api/utils/**: Utility functions and middleware.
 - **src/config/**: Configuration files for BullMQ and other services.
 - **src/app.ts**: Main application entry point.
+- **.env.example**: Sample environment variables file.
 - **.gitignore**: Specifies files to ignore in the version control.
 - **package.json**: Contains project metadata and dependencies.
 - **tsconfig.json**: TypeScript compiler configuration.
@@ -98,6 +103,24 @@ cd project-name
 npm install
 ```
 
+### Environment Variables
+
+Rename the `.env.example` file to `.env`:
+
+```sh
+mv .env.example .env
+```
+
+Update the `DATABASE_URL` in the `.env` file with your database connection string.
+
+### Running Prisma Migrations
+
+Run the following command to apply Prisma migrations:
+
+```sh
+npx prisma migrate dev
+```
+
 ### Running the Project
 
 To start the development server, run:
@@ -107,7 +130,6 @@ npm run dev
 ```
 
 The server will start on `http://localhost:3000`.
-
 
 ## Contributing
 

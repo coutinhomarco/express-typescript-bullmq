@@ -11,6 +11,9 @@
       "dev:2": "concurrently \"npm run start\" \"npm run start:worker\"",
       "build": "tsc"
     },
+    "prisma": {
+      "schema": "src/prisma/schema.prisma"
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {

@@ -43,7 +43,8 @@ program
           'src/api/utils/middleware',
           'src/api/utils/validations',
           'src/config',
-          'src/@types'
+          'src/@types',
+          'src/prisma'
         ];
         folders.forEach((folder) => {
           fs.mkdirSync(path.join(projectPath, folder), { recursive: true });
@@ -52,7 +53,7 @@ program
         const files = {
           'src/@types/custom-types.d.ts': '../templates/@types/custom-types.d.ts',
           'src/@types/ServiceResponse.ts': '../templates/@types/ServiceResponse.ts',
-          'src/api/app.ts': '../templates/app.ts',
+          'src/app.ts': '../templates/app.ts',
           'src/api/routes/user.routes.ts': '../templates/api/routes/user.routes.ts',
           'src/api/controllers/user/user.command.controller.ts': '../templates/api/controllers/user/user.command.controller.ts',
           'src/api/controllers/user/user.query.controller.ts': '../templates/api/controllers/user/user.query.controller.ts',
@@ -66,6 +67,8 @@ program
           'package.json': '../templates/package.json',
           '.gitignore': '../templates/.gitignore',
           'README.md': '../templates/README.md',
+          '.env.example': '../templates/.env.example',
+          'src/prisma/schema.prisma': '../templates/prisma/schema.prisma',
         };
 
         Object.keys(files).forEach((file) => {
