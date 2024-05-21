@@ -112,6 +112,3 @@ This project is built with the following technologies:
 ## License
 
 This project is licensed under the MIT License.
-```
-
-This template README provides a comprehensive overview of the project, helping users understand the structure and purpose of each file and directory. Adjust the content to match any specific details or additional configurations you may have.
